@@ -31,6 +31,7 @@ public class AmazonStore extends JFrame implements ActionListener {
     
     public static void main (String [] args){
         new AmazonStore();
+        new DatabaseConnection();
         
         // create a new instance of a product
     Products p1 = new Products(1,"Microsoft Office",99.99,2014,"Microsoft");
