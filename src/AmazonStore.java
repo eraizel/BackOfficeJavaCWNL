@@ -13,12 +13,12 @@
 public class AmazonStore {
     static Products[] productsList = new Products [100];
     public static void main (String [] args){
-    Products p1 = new Products(1,"Microsoft Office",99.99,2014,"Microsoft");
-    Book b1 = new Book(1,"Microsoft Office",99.99,2014,"Microsoft","Eliazer Raizel", "123123DEASD123", 365);
-    Software s1 = new Software(1,"Microsoft Office",99.99,2014,"Microsoft",500, 2.2, "Windows 7");
-    System.out.println(p1.getProductName());
-    System.out.println(b1.getBookAuthor());
-    System.out.println(s1.getSoftProcSpeed());
+//    Products p1 = new Products(1,"Microsoft Office",99.99,2014,"Microsoft");
+//    Book b1 = new Book(1,"Microsoft Office",99.99,2014,"Microsoft","Eliazer Raizel", "123123DEASD123", 365);
+//    Software s1 = new Software(1,"Microsoft Office",99.99,2014,"Microsoft",500, 2.2, "Windows 7");
+//    System.out.println(p1.getProductName());
+//    System.out.println(b1.getBookAuthor());
+//    System.out.println(s1.getSoftProcSpeed());
     
     }
     
