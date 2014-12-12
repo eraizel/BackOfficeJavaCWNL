@@ -55,6 +55,9 @@ public class AmazonStore extends JFrame implements ActionListener {
         add(b1);
         add(b2);
         add(b3);
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
         
         p1 = new JPanel();
         p1.setBackground(Color.red);
@@ -67,7 +70,7 @@ public class AmazonStore extends JFrame implements ActionListener {
         
         container = new JPanel();
         container.setPreferredSize(new Dimension(300,300));
-        container.setBackground(Color.green);
+        //container.setBackground(Color.green);
         c1 = new CardLayout();
         container.setLayout(c1);
         container.add(p1, "card1");
