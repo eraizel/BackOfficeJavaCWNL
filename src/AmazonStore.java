@@ -1,6 +1,7 @@
 
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -23,8 +24,8 @@ import javax.swing.JTextField;
  * @author eraizel
  */
 public class AmazonStore extends JFrame implements ActionListener {
-    JButton b1, b2, b3;
-    JPanel container, p1, p2, p3;
+    JButton b1, b2, b3, b4;
+    JPanel container, p1, p2, p3, p4;
     CardLayout c1;
     JTextField t1;
     
@@ -45,20 +46,25 @@ public class AmazonStore extends JFrame implements ActionListener {
 
     
     }
+    
     AmazonStore(){
         super("Amazon Store");
         setSize(500,500);
         setLayout(new FlowLayout());
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        b1 = new JButton("one");
-        b2 = new JButton("two");
-        b3 = new JButton("three");
+        b1 = new JButton("New Order");
+        b2 = new JButton("Add New Book");    
+        b3 = new JButton("Add New Software");
+        b4 = new JButton("Add Costumer");
         add(b1);
         add(b2);
         add(b3);
+        add(b4);
         b1.addActionListener(this);
         b2.addActionListener(this);
         b3.addActionListener(this);
+        b4.addActionListener(this);
         
         p1 = new JPanel();
         p1.setBackground(Color.red);
@@ -66,6 +72,8 @@ public class AmazonStore extends JFrame implements ActionListener {
         p2.setBackground(Color.blue);
         p3 = new JPanel();
         p3.setBackground(Color.yellow);
+        p4 = new JPanel();
+        p4.setBackground(Color.white);
         t1 = new JTextField(10);
         p2.add(t1);
         
@@ -77,6 +85,7 @@ public class AmazonStore extends JFrame implements ActionListener {
         container.add(p1, "card1");
         container.add(p2, "card2");
         container.add(p3, "card3");
+        container.add(p4, "card4");
         add(container);
         
         setVisible(true);
@@ -96,6 +105,9 @@ public class AmazonStore extends JFrame implements ActionListener {
         }
         if(e.getSource() == b3){
             c1.show(container, "card3");
+        }
+        if(e.getSource() == b4){
+            c1.show(container, "card4");
         }
         
     }
