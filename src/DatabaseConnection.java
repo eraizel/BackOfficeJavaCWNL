@@ -27,17 +27,7 @@ public class DatabaseConnection {
             
             String sql = "select * from Table1";
             rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String fname = rs.getString("Fname");
-                String lname = rs.getString("Lname");
-                String age = rs.getString("Age");
-                
-                System.out.println("First Name: "+fname+ "\nLast Name: "+lname+"\nAge: "+age);
-                
-                
-            }
-                    
+                                            
         }catch(Exception ex){
         }
     
