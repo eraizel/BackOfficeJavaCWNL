@@ -53,29 +53,8 @@ public class AmazonStore extends JFrame implements ActionListener {
         setLayout(new FlowLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        b1 = new JButton("New Order");
-        b2 = new JButton("Add New Book");    
-        b3 = new JButton("Add New Software");
-        b4 = new JButton("Add Costumer");
-        add(b1);
-        add(b2);
-        add(b3);
-        add(b4);
-        b1.addActionListener(this);
-        b2.addActionListener(this);
-        b3.addActionListener(this);
-        b4.addActionListener(this);
+        buttonAndPanels();
         
-        p1 = new JPanel();
-        p1.setBackground(Color.red);
-        p2 = new JPanel();
-        p2.setBackground(Color.blue);
-        p3 = new JPanel();
-        p3.setBackground(Color.yellow);
-        p4 = new JPanel();
-        p4.setBackground(Color.white);
-        t1 = new JTextField(10);
-        p2.add(t1);
         
         container = new JPanel();
         container.setPreferredSize(new Dimension(300,300));
@@ -110,6 +89,55 @@ public class AmazonStore extends JFrame implements ActionListener {
             c1.show(container, "card4");
         }
         
+    }
+    public void panel1(){
+        p1 = new JPanel();
+        p1.setBackground(Color.red);
+        
+        
+    
+    }
+    public void panel2(){
+        t1 = new JTextField(10);
+        p2 = new JPanel();
+        p2.setBackground(Color.blue);
+        p2.add(t1);
+        
+    
+    }
+    public void panel3(){
+        p3 = new JPanel();
+        p3.setBackground(Color.yellow);
+        
+    
+    }
+    public void panel4(){
+        p4 = new JPanel();
+        p4.setBackground(Color.white);
+        
+    
+    }
+    public void buttonOptions(){
+        b1 = new JButton("New Order");
+        b2 = new JButton("Add New Book");    
+        b3 = new JButton("Add New Software");
+        b4 = new JButton("Add Costumer");
+        add(b1);
+        add(b2);
+        add(b3);
+        add(b4);
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
+        b4.addActionListener(this);
+    }
+    
+    public void buttonAndPanels(){
+        buttonOptions();
+        panel1();
+        panel2();
+        panel3();
+        panel4();
     }
     
 }
